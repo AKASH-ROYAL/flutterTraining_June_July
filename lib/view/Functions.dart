@@ -13,15 +13,23 @@ class _FunctionsState extends State<Functions> {
     {"name": "Jagadesh", "role": "Student", "qualification": "B.E.Mech"},
     {"name": "raja", "role": "Intern", "qualification": "B.E.Mechatronics"},
     {"name": "Alagar", "role": "Student", " qualification": "B.E.CSE"},
-    {"name": "Anbarasan","role": "Student", "qualification": "BE production engineering"},
+    {
+      "name": "Anbarasan",
+      "role": "Student",
+      "qualification": "BE production engineering"
+    },
     {"name": "Lavanya", "role": "Intern", "qualification": "B.Sc.Physics"},
     {"name": "Abilash S", "role": "Intern", "qualification": "B.E CSE"},
     {"name": "kalimuthu", "role": "Student", "qualification": "BE"},
-    {"name": "Susil kumar", "role": "Trainee", "qualification": "B.E CIVIL"},
-    {"name": "kowsalya", "role": "student ", "qualification ": "BSC"},
+    {"name": "Susil kumar", "role": "Student", "qualification": "B.E CIVIL"},
+    {"name": "kowsalya", "role": "Student ", "qualification ": "BSC"},
     {"name": "reni", "role": "Student", "qualification": "BTech"},
-    {"name": "sethu madhavan", "role": "student", "qualification": "B.E-Mech"}
+    {"name": "sethu madhavan", "role": "Student", "qualification": "B.E-Mech"}
   ];
+
+  List studentRole = [];
+  List trainerRole = [];
+  List internRole = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +46,7 @@ class _FunctionsState extends State<Functions> {
               child: ElevatedButton(
                   onPressed: () {
                     print("Trainer");
+                    Trainer();
                   },
                   child: Text("Trainer")),
             ),
@@ -46,7 +55,7 @@ class _FunctionsState extends State<Functions> {
               height: 50,
               child: ElevatedButton(
                   onPressed: () {
-                    start();
+                    students();
                     // print("Students");
                   },
                   child: Text("Students")),
@@ -56,6 +65,7 @@ class _FunctionsState extends State<Functions> {
               height: 50,
               child: ElevatedButton(
                   onPressed: () {
+                    Intern();
                     print("Intern");
                   },
                   child: Text("Intern")),
@@ -64,16 +74,46 @@ class _FunctionsState extends State<Functions> {
         ),
       ),
     );
-
   }
 
-  void start() {
-       print(data );
-    print(data[5] );
-    print(data[5]['role']);
-    if(data[5]['role']=='Intern'){
+  students() {
+    print(data);
+    print(data.length);
 
-      print(true);
+    studentRole.clear();
+    for (int i = 0; i <= data.length - 1; i++) {
+      if (data[i]['role'] == 'Student') {
+        studentRole.add(data[i]);
+      }
     }
+    print(" ${studentRole.length}");
+    print(" ${studentRole}");
+  }
+
+  Intern() {
+    print(data);
+    print(data.length);
+    internRole.clear();
+
+    for (int i = 0; i <= data.length - 1; i++) {
+      if (data[i]['role'] == 'Intern') {
+        internRole.add(data[i]);
+      }
+    }
+    print(" ${internRole.length}");
+    print(" ${internRole}");
+  }
+
+  Trainer() {
+    print(data);
+    print(data.length);
+    trainerRole.clear();
+    for (int i = 0; i <= data.length - 1; i++) {
+      if (data[i]['role'] == 'Trainer') {
+        trainerRole.add(data[i]);
+      }
+    }
+    print(" ${trainerRole.length}");
+    print(" ${trainerRole}");
   }
 }
