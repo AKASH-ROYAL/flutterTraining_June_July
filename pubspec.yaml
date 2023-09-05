@@ -91,4 +91,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/homescreen.png
+    - assets/sampledata.json
 
