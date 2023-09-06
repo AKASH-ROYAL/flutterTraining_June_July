@@ -11,7 +11,7 @@ class TaskTwo extends StatefulWidget {
 }
 
 class _TaskTwoState extends State<TaskTwo> {
-  List data = [];
+  List<Map<String, dynamic>> data = [];
   List filterddata = [];
 
   TextEditingController filerctrl = TextEditingController();
@@ -45,18 +45,11 @@ class _TaskTwoState extends State<TaskTwo> {
             ),
             // Name
             ElevatedButton(
-                onPressed: () {
-                  filterddata.clear();
-                  for (var individualData in data) {
-                    var name = individualData['name'];
-                    if (name == filerctrl.text) {
-                      filterddata.add(individualData);
-                      print("Condition Print : $filterddata");
-                    }
-                  }
-                  print("Controller : ${filterddata}");
-                },
-                child: Text("name")),
+              child: Text("name"),
+              onPressed: () {
+                filter_names(test2: "Test2Value", test1: "Test1Value");
+              },
+            ),
             //University
             ElevatedButton(
                 onPressed: () {
@@ -76,7 +69,7 @@ class _TaskTwoState extends State<TaskTwo> {
                 onPressed: () {
                   filterddata.clear();
                   for (var individualData in data) {
-                    var role = individualData ['branches'][0]['role'];
+                    var role = individualData['branches'][0]['role'];
                     if (role == filerctrl.text) {
                       filterddata.add(individualData);
                       // print("Condition Print : $filterddata");
@@ -105,5 +98,23 @@ class _TaskTwoState extends State<TaskTwo> {
         ),
       ),
     );
+  }
+
+  void filter_names({
+    required String test1,
+    required String test2,
+  }) {
+    //   filterddata.clear();
+    //
+    // for (var individualData in data) {
+    //   var name = individualData['name'];
+    //   if (name == filerctrl.text) {
+    //     filterddata.add(individualData);
+    //     print("Condition Print : $filterddata");
+    //     print("Condition Print : $test");
+    //   }
+    // }
+    print("Test1 : ${test1}");
+    print("Test2 : ${test2}");
   }
 }

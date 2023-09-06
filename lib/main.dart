@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:trainingproject/testPurpose.dart';
+import 'package:trainingproject/view/06082023.dart';
 import 'package:trainingproject/view/Functions.dart';
 
-import 'TaskTwoResult.dart';
+import 'view/TaskTwoResult.dart';
 import 'view/myFirstApp.dart';
 
- void main() {
+void main() {
   runApp(MaterialApp(
-    debugShowCheckedModeBanner:false ,
-    home: TaskTwo(),
+    debugShowCheckedModeBanner: false,
+    home: UiUpdation(),
   ));
 }

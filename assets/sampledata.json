@@ -1,8 +1,7 @@
 {
-  "data":
-  [
+  "data": [
     {
-      "name": "Arun Kumar",
+      "name": "Arun Kumar Shetty",
       "age": 3,
       "university": "Indian Institute of Technology Madras",
       "branches": [
@@ -563,6 +562,4 @@
       ]
     }
   ]
-
-
 }
