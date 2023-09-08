@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'Functions.dart';
+
 class UiUpdation extends StatefulWidget {
   const UiUpdation({super.key});
 
@@ -32,10 +34,19 @@ class _UiUpdationState extends State<UiUpdation> {
   Widget build(BuildContext context) {
     print(data.length);
     return Scaffold(
-      appBar: AppBar(
-        title: Text("UiUpdation"),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: Text("UiUpdation"), centerTitle: true, actions: [
+        Container(
+            padding: EdgeInsets.only(right: 20),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Functions()));
+
+                print("TApped");
+              },
+              icon: Icon(Icons.arrow_circle_right_sharp),
+            ))
+      ]),
       body: Column(
         children: [
           TextFormField(

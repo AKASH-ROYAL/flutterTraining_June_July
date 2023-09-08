@@ -37,7 +37,10 @@ class _MyFirstAppState extends State<MyFirstApp> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("This is the Flutter playground"),
-                        Text("Play to learn flutter "),
+                        Text(
+                          "Play to learn flutter ",
+                          style: TextStyle(fontSize: 23),
+                        ),
                       ],
                     ),
                   ),
@@ -65,7 +68,7 @@ class _MyFirstAppState extends State<MyFirstApp> {
               width: 500,
               // decoration: BoxDecoration(
               //     border: Border.all(color: Colors.green, width: 3)),
-              child:const Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Column(
@@ -86,7 +89,7 @@ class _MyFirstAppState extends State<MyFirstApp> {
               width: 300,
               height: 200,
               color: Colors.amber,
-              padding:const  EdgeInsets.all(4),
+              padding: const EdgeInsets.all(4),
               margin: EdgeInsets.all(20),
               // decoration: BoxDecoration(
               //     borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -94,17 +97,10 @@ class _MyFirstAppState extends State<MyFirstApp> {
               //       color: Colors.black,
               //     )),
               child: Center(
-                child: Text(
-
-                    "qwertyuioasdfghjkzxcvbnmqwertyuioasdfghjkzxcvbnmqwertyuioasdfghjkzxcvbnmqwertyuioasdfghjkzxcvbnm"
-                   , style:TextStyle(
-                    color: Colors.red
-                ),
-
-
-             )
-
-              ),
+                  child: Text(
+                "qwertyuioasdfghjkzxcvbnmqwertyuioasdfghjkzxcvbnmqwertyuioasdfghjkzxcvbnmqwertyuioasdfghjkzxcvbnm",
+                style: TextStyle(color: Colors.red),
+              )),
             )
           ],
         ),
